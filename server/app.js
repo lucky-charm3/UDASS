@@ -21,7 +21,7 @@ const app = express();
 app.use(helmet());
 
 app.use(cors({ 
-  origin:"https://udass.netlify.app/",
+  origin:process.env.CLIENT_URL,
   credentials: true ,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   allowedHeaders: [
